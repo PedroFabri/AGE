@@ -1,0 +1,29 @@
+{
+	"offset" : 1,
+	"columns":[
+		{
+			"header": {
+				"title"           : "Material",
+				"centered"   	  : true,
+				"color"			  : "COL_KEY INTENSIFIED ON"
+			},
+			"content":{
+				"variable"        : "vl_matnr",
+				"size"            : 20,
+				"centered"        : true
+			}
+		},
+		{
+			"header": {
+				"title"           : "Descrição do Material",
+				"centered"   	  : false,
+				"color"			  : "COL_KEY INTENSIFIED OFF"
+			},
+			"content":{
+				"variable" 		  : "vl_matnx",
+				"size"            : 150,
+				"centered"        : false
+			}
+		}
+	]
+}

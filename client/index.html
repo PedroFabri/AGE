@@ -1,0 +1,118 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="blue lighten-5">
+    
+    <!-- SIDE-NAV -->
+      <ul id="slide-out" class="side-nav light-blue darken-1">
+
+        <ul>
+          <li><a href="#">Write Report</a></li>
+        </ul>
+      </ul>
+
+    <!--NAV--> 
+      <nav class="light-blue darken-1">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">AGe - ABAP Generator</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="#" data-activates="slide-out" id="button-collapse"><i class="material-icons">menu</i></a></li>
+          </ul>
+        </div>
+      </nav> 
+
+    <!--BODY-->
+      <div class="row">
+        
+
+        <!--BODY-LEFT-->
+          <div class="col s9" style="min-height: 100vh;">
+            <div class="input-field">
+              <div class="row white column">
+                <!-- COLUMN NAME -->
+                  <div class="input-field inline col s5">
+                    <input placeholder="Column Title" id="title" type="text" class="validate">
+                  </div>
+                <!-- COLUMN NAME CENTERED? -->
+                  <div class="input-field inline col s2">
+                    <input id="size" type="number" name="size" placeholder="Size">
+                  </div>
+                <!--VARIABLE NAME-->
+                  <div class="input-field inline col variable col s5">
+                    <input id="variable" type="text" name="variable" placeholder="Variable Name">
+                  </div>
+                <!--COLOR-->
+                   <div class="input-field inline col variable col s3">
+                    <select>
+                      <option value="" selected disabled>Select the color</option>
+                      <option value="COL_BACKGROUND">COL_BACKGROUND</option>
+                      <option value="COL_HEADING">COL_HEADING</option>
+                      <option value="COL_NORMAL">COL_NORMAL</option>
+                      <option value="COL_TOTAL">COL_TOTAL</option>
+                      <option value="COL_KEY">COL_KEY</option>
+                      <option value="COL_POSITIVE">COL_POSITIVE</option>
+                      <option value="COL_NEGATIVE">COL_NEGATIVE</option>
+                      <option value="COL_GROUP">COL_GROUP</option>
+                    </select>
+                    <label>Header Color</label>
+                  </div>
+                <!--COLOR OPTIONS -->
+                  <div class="input-field inline col s3">
+                    <input class="with-gap inline" name="color_options" type="radio" id="INTENSIFIED-OFF" checked />
+                    <label for="INTENSIFIED-OFF">INTENSIFIED OFF</label>
+                  </div>
+                  <div class="input-field inline col s3">
+                    <input class="with-gap inline" name="color_options" type="radio" id="INTENSIFIED-ON" />
+                    <label for="INTENSIFIED-ON">INTENSIFIED ON</label>
+                  </div>
+                  <div class="input-field inline col s3">
+                    <input class="with-gap inline" name="color_options" type="radio" id="INVERSE" />
+                    <label for="INVERSE">INVERSE</label>
+                  </div>
+              </div>
+              <a href="#" class="btn-floating right" =""><i class="material-icons">add</i></a> 
+            </div>
+          </div>    
+
+        <!--BODY-RIGHT-->  
+          <div class="col s3 blue lighten-4 z-depht-5" style="min-height: 100vh;">
+              <div class="input-field">
+                <h4 class="center-align">Write Report</h4>
+                <a class="waves-effect waves-light btn light-blue darken-1 col s4 offset-s4">Generate</a>
+              </div>
+              <div class="input-field col s12">
+                Table Header:
+                <textarea id="table-header-out" class="materialize-textarea disabled"></textarea>
+                <a class="waves-effect waves-light btn light-blue darken-1 right">Copy</a>
+              </div>
+              <div class="input-field col s12">
+                Table Line:
+                <textarea id="table-line-out" class="materialize-textarea disabled"></textarea>
+                <a class="waves-effect waves-light btn light-blue darken-1 right">Copy</a>
+              </div>
+          </div>
+      </div>
+
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">  
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>  
+    <script type="text/javascript">
+      $("#button-collapse").sideNav();
+      $(document).ready(function() {
+        $('select').material_select();
+      });
+    </script>
+  </body>
+</html>

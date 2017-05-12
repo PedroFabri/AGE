@@ -1,0 +1,7 @@
+.column{
+	border: 1px solid black;
+}
+
+.full-height{
+	min-height: 100vh;
+}
